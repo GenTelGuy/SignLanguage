@@ -2,7 +2,7 @@ import com.leapmotion.leap.*;
 
 public class Comparisons {
 	
-	public static boolean basisInBounds(basis min, basis max, basis test ){//This function tests whether a bone is within the accepted parameters
+	public static boolean basisInBounds(float[] min, float[] max, float[] test ){//This function tests whether a bone is within the accepted parameters
 		
 		if(scalarInBounds(min[0], max[0], test[0]) && scalarInBounds(min[1], max[1], test[1]) && scalarInBounds(min[2], max[2], test[2])){
 	
