@@ -1,18 +1,26 @@
 import java.util.ArrayList;
-import java.awt.*;
-import java.awt.geom.*;
 import java.awt.event.*;
-
-import java.io.*;
-import javax.sound.sampled.*;
+import javax.swing.JFrame;
 
 
-public class Game extends JFrame implements ActionListener {
+public class Game extends JFrame {
+	private static final long serialVersionUID = 1L;
 	public static ArrayList<Letter> alphabet;
 	public LeapmotionReader read;
+	private JFrame theFrame;
 	
 	public Game() {
-		/*alphabet = new ArrayList<Letter>();
+		theFrame = new JFrame("Sign language teacher");
+		theFrame.addWindowListener(new WindowAdapter() { public void windowClosing(WindowEvent e) { System.exit(0);} });
+		theFrame.pack();
+		theFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		theFrame.setVisible(true);
+		
+		//initAlphabet();
+	}
+	
+	public void initAlphabet() {
+		alphabet = new ArrayList<Letter>();
 		
 		alphabet.add(new Letter("A"));
 		alphabet.add(new Letter("B"));
@@ -39,7 +47,7 @@ public class Game extends JFrame implements ActionListener {
 		alphabet.add(new Letter("W"));
 		alphabet.add(new Letter("X"));
 		alphabet.add(new Letter("Y"));
-		alphabet.add(new Letter("Z"));*/
+		alphabet.add(new Letter("Z"));
 	}
 	
 	public void play() {
@@ -49,5 +57,6 @@ public class Game extends JFrame implements ActionListener {
 		
 	}
 	public void showLetterScreen(Letter let) {
+		
 	}
 }
